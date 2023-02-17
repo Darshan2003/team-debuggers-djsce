@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import more from "../assets/more-white.svg"
 
 
@@ -29,16 +28,7 @@ function Header() {
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
         </svg>
       </div> */}
-=======
- 
-function Header() {
-  return (
-    <div className='z-30 absolute flex justify-center items-center '>
-
-        <img src="" alt="" />
-        <h1>this is header</h1>
->>>>>>> 907dff212d756e148eb8ccb0d6b85981bc2521ea
-    </div>
+      </div>
   )
 }
 

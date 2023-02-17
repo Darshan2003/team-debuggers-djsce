@@ -1,10 +1,8 @@
 import React from 'react'
 import Header from './Header'
-import First from './First'
-import Trending from './Trending'
 import Trending1 from '../components/Trending/Trending1'
-import Trending2 from './Trending/Trending2'
-import Trending3 from './Trending/Trending3'
+import Trending2 from '../components/Trending/Trending2'
+import Trending3 from '../components/Trending/Trending3'
 
 function Homepage() {
 

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import sideimage from "../assets/sideimage.jpg"
 import { backendUrl } from '../definition';
 import axios from "axios";
+
 
 
 function Signup() {
@@ -174,7 +175,7 @@ function Signup() {
                         <div className='flex justify-center items-center w-72 bg-black text-white py-2'>
                             <button type='submit' onClick={uploadData}>Sign Up</button>
                         </div>
-                        <h1 className='text-gray-500'><Link to="/signup">Already registered?</Link></h1>
+                        <h1 className='text-gray-500'><NavLink to="/login">Already registered?</NavLink></h1>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </form>
                 </div>
