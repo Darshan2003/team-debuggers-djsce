@@ -3,16 +3,47 @@ import logo from "../assets/logo.jpeg"
 import { ToastContainer, toast } from 'react-toastify';
 import { Link, NavLink } from "react-router-dom"
 import sideimage from "../assets/sideimage.jpg"
+import { useState } from 'react';
+import axios from 'axios';
+import { backendUrl } from '../definition';
 
 function Login() {
 
-    const emailRef = useRef(null);
-    const passwordRef = useRef(null);
-    const confirmPasswordRef = useRef(null);
 
+   const [email, setEmail] = useState('')
+   const [password, setPassword] = useState('')
 
-    const firstNameRef = useRef(null);
-    const lastNameRef = useRef(null);
+    
+   const signIn = async () => {
+
+    if (!email) {
+        toast.error("Please Enter email");
+    }
+    else if (!password) {
+        toast.error("Please Enter password");
+    } 
+    
+        
+        try {
+            let res;
+               
+                res = await axios.get(
+                    `${backendUrl}/api/authentication/authenticate`,{ params: { email: email, password: password } }
+                );
+
+                
+            if (res.data.SUCCESS == "TRUE") {
+                toast.success("Successfully saved!");
+                // cancelBtn();
+            }
+            else {
+                toast.error("Something went wrong!");
+            }
+        } catch (ex) {
+            console.log(ex);
+        }
+
+    }
 
 
     const login = (e) => {
@@ -43,9 +74,6 @@ function Login() {
         theme: "light",
     });
 
-    const signIn = (e) => {
-        e.preventDefault();
-    }
 
     return (
         <>
@@ -87,7 +115,9 @@ function Login() {
                             style={{
                                 fontFamily: 'Medium'
                             }}
-                            ref={emailRef} type="email" placeholder="Email address" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-72'
+                             type="email" placeholder="Email address" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-72'
+                            onChange={(event) =>{setEmail(event.target.value)}}
+                        
                         />
 
                         {/* Password */}
@@ -95,7 +125,8 @@ function Login() {
                             style={{
                                 fontFamily: 'Medium'
                             }}
-                            ref={passwordRef} type="password" placeholder="Password" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-72'
+                           type="password" placeholder="Password" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-72'
+                            onChange={(event) => {setPassword(event.target.value)}}
                         />
 
 
