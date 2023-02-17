@@ -4,6 +4,8 @@ import './fonts/NeueHaasDisplayBlack.ttf';
 import Top from './components/Top';
 import Top2 from './components/Top2';
 import Login from './components/Login';
+import Genre from './components/Genre';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +29,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <Signup />
+          </Route>
+          <Route path="/genre">
+            <Genre />
           </Route>
           <Route path="/">
             <Homepage />
