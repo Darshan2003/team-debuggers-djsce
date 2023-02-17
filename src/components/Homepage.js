@@ -4,6 +4,7 @@ import First from './First'
 import Trending from './Trending'
 import Trending1 from '../components/Trending/Trending1'
 import Trending2 from './Trending/Trending2'
+import Trending3 from './Trending/Trending3'
 
 function Homepage() {
 
@@ -13,7 +14,7 @@ function Homepage() {
       <Header />
       <Trending1 />
       <Trending2 />
-      {/* <Trending /> */}
+      <Trending3 />
 
     </div>
   )

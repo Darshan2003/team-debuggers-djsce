@@ -31,14 +31,14 @@ function Trending1() {
                         fontFamily: 'Medium',
                         top: '30px'
                     }}>8 Things to consider
-                       </h1>
+                    </h1>
 
-                       <h1 className='text-4xl bg-white text-black p-2 rounded-lg absolute z-10 ' style={{
+                    <h1 className='text-4xl bg-white text-black p-2 rounded-lg absolute z-10 ' style={{
                         fontFamily: 'Medium',
                         top: '80px',
                         left: '-5px'
                     }}>
-                       for photography</h1>
+                        for photography</h1>
                     <img className='rounded-lg h-[670px] w-full object-cover  shadow-lg' src="https://images.unsplash.com/photo-1676624765470-98b4544df2e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="img1" />
                 </div>
                 {/* Second div */}
@@ -62,6 +62,39 @@ function Trending1() {
                             fontFamily: 'Medium'
                         }}>This Rapper got kidnapped</h1>
                     </div>
+                </div>
+
+            </div>
+
+
+            {/* green box */}
+            <div className='bg-lime-300 w-[1000px] h-96  rounded-lg p-10 shadow-lg '>
+
+                <div className='flex justify-between items-center'>
+                    <div className='flex justify-center items-center '>
+                        <h1
+                            style={{
+                                fontFamily: 'Medium',
+                            }}
+                            className='text-4xl leading-loose'>365 Magazines Straight
+                            <br />To Your Magazine</h1>
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <h1 className='tracking-wide '>Sign up to our weekly newsletter to be the first to
+                            know what's on in South East.</h1>
+                    </div>
+                </div>
+
+                <div
+                    style={{
+                        fontFamily: 'Medium',
+                    }}
+                    className='flex justify-between items-center border-t border-black mt-24 pt-3'>
+                    <input placeholder='Enter your email address' className='outline-none bg-transparent placeholder:text-black' />
+                    <div className='flex justify-center items-center hover:ease-in-out '>
+                        <h1 className='cursor-pointer transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110  duration-300 '>Subscribe</h1>
+                    </div>
+
                 </div>
 
             </div>
