@@ -135,7 +135,7 @@ const Article = () => {
 
 
                         {/* Sign Up Link */}
-                        {/* <h1 className='text-gray-500'><Link to="/signup">Not a member?</Link></h1> */}
+                        <h1 className='text-gray-500'><NavLink exact path="/signup">Not a member?</NavLink></h1>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </div>
                 </div>
