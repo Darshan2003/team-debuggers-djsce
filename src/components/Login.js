@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import logo from "../assets/logo.jpeg"
 import { ToastContainer, toast } from 'react-toastify';
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import sideimage from "../assets/sideimage.jpg"
 
 function Login() {
@@ -111,7 +111,7 @@ function Login() {
                         </div>
 
                         {/* Sign Up Link */}
-                        <h1 className='text-gray-500'><Link to="/signup">Not a member?</Link></h1>
+                        <h1 className='text-gray-500'><NavLink exact path="/signup">Not a member?</NavLink></h1>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </form>
                 </div>
