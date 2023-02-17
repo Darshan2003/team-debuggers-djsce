@@ -40,7 +40,6 @@ function Signup() {
 
     const signUp = (e) => {
         e.preventDefault();
-
     }
 
     return (
@@ -80,12 +79,14 @@ function Signup() {
                 
                         className='flex flex-col justify-center items-center space-y-8'>
                         <div className='flex justify-between items-center w-full space-x-12'>
+                            {/* First Name */}
                             <input
                                 style={{
                                     fontFamily: 'Medium'
                                 }}
                                 ref={firstNameRef} type="text" placeholder="First Name" className='placeholder:text-gray-600 px-4 py-2 outline-none border border-gray-800 w-64'
                             />
+                            {/* Last Name */}
                             <input
                                 style={{
                                     fontFamily: 'Medium'
@@ -94,12 +95,14 @@ function Signup() {
                             />
                         </div>
                         <div className='flex justify-between items-center w-full '>
+                            {/* Email Address */}
                             <input
                                 style={{
                                     fontFamily: 'Medium'
                                 }}
                                 ref={emailRef} type="email" placeholder="Email address" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-64 '
                             />
+                            {/* Password */}
                             <input
                                 style={{
                                     fontFamily: 'Medium'
@@ -107,7 +110,7 @@ function Signup() {
                                 ref={passwordRef} type="password" placeholder="Password" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-64'
                             />
                         </div>
-
+                        {/* Confirm Password */}
                         <input
                             style={{
                                 fontFamily: 'Medium'
@@ -118,7 +121,9 @@ function Signup() {
                         <div className='flex justify-center items-center w-72 bg-black text-white py-2'>
                             <button type='submit' onClick={signUp}>Sign Up</button>
                         </div>
-                        <h1 className='text-gray-500'><Link to="/signup">Already registered?</Link></h1>
+                        
+                        {/* If already registered, redirect to login page */}
+                        <h1 className='text-gray-500'><Link to="/login">Already registered?</Link></h1>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </form>
                 </div>

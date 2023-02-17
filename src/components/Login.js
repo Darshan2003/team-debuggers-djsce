@@ -19,6 +19,7 @@ function Login() {
         e.preventDefault();
 
     }
+    // Notify for successful login
     const notifySuccess = () => toast.success('Logged in successfully', {
         position: "top-right",
         autoClose: 2000,
@@ -29,6 +30,8 @@ function Login() {
         progress: undefined,
         theme: "light",
     });
+
+    //Notify if unsuccessfull error
     const notifyError = () => toast.error('Invalid email or password', {
         position: "top-right",
         autoClose: 2000,
@@ -59,11 +62,11 @@ function Login() {
                 pauseOnHover
                 theme="light"
             />
+
             <div
 
                 style={{
                     fontFamily: 'Medium',
-
                 }}
 
                 className='flex justify-center items-center w-screen h-screen'
@@ -79,12 +82,15 @@ function Login() {
                     <h1 className='text-center text-4xl mb-10'>Welcome to the world of information!</h1>
                     <form className='flex flex-col justify-center items-center space-y-5'>
 
+                        {/* Email */}
                         <input
                             style={{
                                 fontFamily: 'Medium'
                             }}
                             ref={emailRef} type="email" placeholder="Email address" className='placeholder:text-gray-600 px-5 py-2  outline-none border border-gray-800 w-72'
                         />
+
+                        {/* Password */}
                         <input
                             style={{
                                 fontFamily: 'Medium'
@@ -94,13 +100,17 @@ function Login() {
 
 
 
-
-                        <div className='flex justify-between items-center cursor-pointer '>
+                        {/* Forgot Password */}
+                        <div className='flex justify-between items-center cursor-pointer \'>
                             <h1 className='font-normal text-sm text-right ml-24 text-gray-500'>Forgot your Password?</h1>
                         </div>
+
+                        {/* Sign In */}
                         <div className='flex justify-center items-center w-72 bg-black text-white py-2'>
                             <button type='submit' onClick={signIn}>Sign In</button>
                         </div>
+
+                        {/* Sign Up Link */}
                         <h1 className='text-gray-500'><Link to="/signup">Not a member?</Link></h1>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </form>
