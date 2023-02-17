@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import logo from "../assets/logo.jpeg"
 import { ToastContainer, toast } from 'react-toastify';
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import sideimage from "../assets/sideimage.jpg"
 import { useState } from 'react';
 import axios from 'axios';
@@ -142,7 +142,9 @@ function Login() {
                         </div>
 
                         {/* Sign Up Link */}
-                        <h1 className='text-gray-500'><NavLink exact path="/signup">Not a member?</NavLink></h1>
+                        <NavLink exact path="/signup">
+                        <h1 className='text-gray-500'>Not a member?</h1>
+                        </NavLink>
                         {/* <h1 className='underline'> <Link to="/signup">Join us</Link></h1> */}
                     </form>
                 </div>
