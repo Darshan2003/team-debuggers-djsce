@@ -1,4 +1,6 @@
 import React from 'react'
+import more from "../assets/more-white.svg"
+
 
 function Header() {
 

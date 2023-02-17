@@ -1,7 +1,5 @@
 import React from 'react'
 import Header from './Header'
-
-
 import Trending1 from '../components/Trending/Trending1'
 import Trending2 from '../components/Trending/Trending2'
 import Trending3 from '../components/Trending/Trending3'
